@@ -64,7 +64,7 @@ with open("PhonePe_Transaction_Summary.txt", "w", encoding="utf-8") as f:
     f.write(formatted_text)
 
 # === STEP 7: Export to PDF ===
-pdf_file = "zPhonePe_Transaction_Summary.pdf"
+pdf_file = "PhonePe_Transaction_Summary.pdf"
 doc = SimpleDocTemplate(pdf_file, pagesize=A4, rightMargin=72, leftMargin=72, topMargin=50, bottomMargin=50)
 styles = getSampleStyleSheet()
 monospace = ParagraphStyle(
@@ -79,7 +79,7 @@ story = [Paragraph(line.replace(" ", "&nbsp;"), monospace) if line.strip() else 
 doc.build(story)
 
 # === STEP 8: Export to Word ===
-word_file = "zPhonePe_Transaction_Summary.docx"
+word_file = "PhonePe_Transaction_Summary.docx"
 docx = Document()
 docx.add_heading("PhonePe Transaction Summary", level=1)
 for line in output_lines:
@@ -92,6 +92,6 @@ docx.save(word_file)
 # === STEP 9: Done ===
 print("\n✅ Exported successfully:")
 print("📘 Excel → PhonePe_Transaction_Summary.xlsx")
-print("📄 PDF   → zPhonePe_Transaction_Summary.pdf")
-print("📝 Word  → zPhonePe_Transaction_Summary.docx")
+print("📄 PDF   → PhonePe_Transaction_Summary.pdf")
+print("📝 Word  → PhonePe_Transaction_Summary.docx")
 print("📜 Text  → PhonePe_Transaction_Summary.txt")
