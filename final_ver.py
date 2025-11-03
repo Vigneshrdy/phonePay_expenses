@@ -8,7 +8,9 @@ from reportlab.lib.units import inch
 from docx import Document  # from python-docx package
 
 # === STEP 1: Extract text from PhonePe PDF ===
-pdf_path = r"C:\VIGNESH REDDY\pp\PhonePe_Transaction_Statement_unlocked.pdf"
+# pdf_path = r"C:\USERNAME\\PhonePe_Transaction_Statement_unlocked.pdf"
+#Unlock ur pdf and then paste here the file location crtl+sht+c
+pdf_path = r""
 text = extract_text(pdf_path)
 
 # Remove timestamps like "06:16 PM" (only if you don't need them)
